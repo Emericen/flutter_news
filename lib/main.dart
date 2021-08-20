@@ -8,6 +8,10 @@ import 'package:flutter_news/part1/SquarePage.dart';
 import 'package:flutter_news/part1/FreeFlowNewsPage.dart';
 import 'package:flutter_news/part1/AllItemsPage.dart';
 
+
+// app is on mac as well :)
+
+
 void main() {
   runApp(MyApp());
 }
