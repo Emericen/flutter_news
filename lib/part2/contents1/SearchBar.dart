@@ -6,7 +6,9 @@ typedef SearchCallback = void Function(String data);
 class SearchBar extends StatefulWidget {
   // const SearchBar({Key? key}) : super(key: key);
 
-  SearchBar(Color statusBarColor, {Key? key, required this.onCancelSearch, required this.onSearchQueryChanged})
+  SearchBar(Color statusBarColor, {Key? key,
+    required this.onCancelSearch,
+    required this.onSearchQueryChanged})
       : super(key: key);
 
   final VoidCallback onCancelSearch;
@@ -33,6 +35,9 @@ class _SearchBarState extends State<SearchBar> {
             color: Colors.grey[400],
           ),
           onPressed: widget.onCancelSearch,
+          // onPressed: () {
+          //   print('tried to cancel search!');
+          // },
         ),
       ),
     );
@@ -67,15 +72,16 @@ class _TitleContentsState extends State<TitleContents> {
   Widget build(BuildContext context) {
     return Container(
       height: 50,
-      width: 350,
+      // width: 350,
       color: Colors.white,
       child: Row(
+        mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Container(
             height: 30,
-            width: 280,
+            width: 250,
             child: TextField(
               controller: _searchFieldController,
 
@@ -203,7 +209,8 @@ class _TitleContentsState extends State<TitleContents> {
             padding: EdgeInsets.only(left: 10, right: 10),
             child: GestureDetector(
               onTap: () {
-                print('点击了搜索按钮');
+                print('Searched for '+_searchFieldController.value.text);
+                // print(_searchFieldController.value);
               },
               child: Text(
                 '搜索',

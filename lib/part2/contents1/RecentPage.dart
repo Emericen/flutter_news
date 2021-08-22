@@ -9,6 +9,9 @@ class _RecentPageState extends State<RecentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: new AppBar(
+        title: new Text('最近浏览'),
+      ),
       body: Row(
         children: <Widget>[
           buildContents('assets/images/shopping_alpha.png', 'Item1', Colors.red),
