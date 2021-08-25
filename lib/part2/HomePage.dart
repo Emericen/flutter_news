@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_news/part2/contents1/TabContentPage.dart';
+import 'package:flutter_news/part2/contents2/TabContentPage.dart';
 import 'package:flutter_news/part2/contents1/SearchBar.dart';
 import 'package:flutter_news/part2/routes/RouteManager.dart';
 

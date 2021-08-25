@@ -8,8 +8,9 @@ class RecentPage extends StatefulWidget {
 class _RecentPageState extends State<RecentPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Row(
+    return SizedBox(
+      // height: ,
+      child: Row(
         children: <Widget>[
           buildContents('assets/images/shopping_alpha.png', 'Item1', Colors.red),
           buildContents('assets/images/shopping2_alpha.png', 'Item2', Colors.blue),
