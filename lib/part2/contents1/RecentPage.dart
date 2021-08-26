@@ -8,26 +8,24 @@ class RecentPage extends StatefulWidget {
 class _RecentPageState extends State<RecentPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: new AppBar(
-        title: new Text('最近浏览'),
-      ),
-      body: Row(
+    return Container(
+      child: Row(
         children: <Widget>[
-          buildContents('assets/images/shopping_alpha.png', 'Item1', Colors.red),
-          buildContents('assets/images/shopping2_alpha.png', 'Item2', Colors.blue),
-          buildContents('assets/images/shopping3_alpha.png', 'Item3', Colors.orange),
-          buildContents('assets/images/shopping4_alpha.png', 'Item4', Colors.teal),
+          buildContents('assets/images/shopping_alpha.png', 'Heart', Colors.red),
+          buildContents('assets/images/shopping2_alpha.png', 'Star', Colors.blue),
+          buildContents('assets/images/shopping3_alpha.png', 'Hexagon', Colors.orange),
+          buildContents('assets/images/shopping4_alpha.png', 'Chat', Colors.teal),
         ],
       ),
     );
   }
 
   Widget buildContents(String path, String text, Color color) {
-    return Padding(
-      padding: const EdgeInsets.all(5),
+    return Expanded(
+      flex: 1,
+      // padding: const EdgeInsets.all(5),
       child: Column(
-        children: <Widget> [
+        children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(10),
             child: CircleAvatar(
