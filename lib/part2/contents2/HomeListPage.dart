@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -32,7 +30,6 @@ class _HomeListPageState extends State<HomeListPage> {
       future: rootBundle.loadString('assets/news.json'),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
-          // print(snapshot.data.runtimeType);
           NewsModel model = newsModuleFromJson(snapshot.data);
           for (int i = 0; i < model.data.length; i++) {
             Data bean = model.data[i];
@@ -100,7 +97,6 @@ class _HomeListPageState extends State<HomeListPage> {
   }
 
   Widget buildCommentCountText(String commentCount) {
-    print('hererere');
     if (int.parse(commentCount) >= 2000) {
       return Container(
         padding: EdgeInsets.all(1),
