@@ -58,6 +58,7 @@ flutter:
     - assets/images/shopping4_alpha.png
     - assets/images/right_dot.png
     - assets/news.json
+    - assets/videos.json
 
   # To add assets to your application, add an assets section, like this:
   # assets:

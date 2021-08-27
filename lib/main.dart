@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_news/part1/SmallVideoPage.dart';
+import 'package:flutter_news/part2/contents2/VideoTabPage.dart';
 import 'package:flutter_news/part2/HomePage.dart';
 
 import 'package:flutter_news/part2/contents1/AllItemsPage.dart';
@@ -74,7 +74,8 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         children: <Widget>[
           HomePage(),
-          SmallVideoPage(),
+          // SmallVideoPage(),
+          VideoTabPage(),
           TrendPage(),
           NotificationPage(),
         ],
